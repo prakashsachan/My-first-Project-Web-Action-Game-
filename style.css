@@ -1,0 +1,412 @@
+ @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Comfortaa:wght@300&family=Exo+2:ital,wght@0,700;1,400&family=Lato:wght@100&family=Nunito:wght@200&family=Pixelify+Sans&family=Prompt:wght@500&display=swap');
+
+
+ * {
+     padding: 0;
+     margin: 0;
+ }
+
+ body {
+     overflow: hidden;
+ }
+
+ .gamecontainer {
+     background-size: 100vw 100vh;
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 100vh;
+     background-image: url(game\ bg.jpg)
+ }
+
+ .hbd {
+     position: absolute;
+     font-size: 25px;
+     left: 35vw;
+     top: 10px;
+     font-family: 'Prompt', sans-serif;
+     opacity: .2;
+ }
+
+ .creater {
+     position: absolute;
+     right: 5px;
+     bottom: 5px;
+     color: antiquewhite;
+     z-index: 1;
+ }
+
+
+ .gameover {
+     visibility: hidden;
+     font-size: 50px;
+     position: absolute;
+     left: 40vw;
+     top: 10vh;
+     font-family: 'Pixelify Sans', sans-serif;
+
+ }
+
+ .gameoverinfo {
+     visibility: hidden;
+     font-size: 20px;
+     position: absolute;
+     left: 38vw;
+     top: 18vh;
+     font-family: 'Pixelify Sans', sans-serif;
+
+ }
+
+ #scorecount {
+     font-size: 20px;
+     font-family: 'Prompt', sans-serif;
+     border: 2px solid;
+     width: 10vw;
+     margin-left: 89vw;
+ }
+
+ .track {
+     width: 800vw;
+     height: 30vh;
+     background-image: url(track.png);
+     background-repeat: repeat-x;
+     position: absolute;
+     top: 84vh;
+ }
+
+ .animatetrack {
+     animation: trackani linear 10s infinite;
+
+ }
+
+ @keyframes trackani {
+     100% {
+
+         transform: translateX(-500vw);
+
+     }
+
+ }
+
+ .hero {
+     background-image: url(sahilrun.gif);
+     width: 85px;
+     height: 140px;
+     background-size: cover;
+     top: 68vh;
+     position: absolute;
+     left: 8vw;
+ }
+
+ .animatehero {
+     animation: hero 0.6s linear;
+ }
+
+ @keyframes hero {
+
+     0% {
+         top: 68vh;
+
+     }
+
+     50% {
+         top: 40vh;
+
+     }
+
+     100% {
+         top: 68vh;
+     }
+
+ }
+
+ .heroin {
+     background-image: url(renu-run.gif);
+     width: 70px;
+     height: 147px;
+     background-size: cover;
+     position: absolute;
+     right: 20vw;
+     top: 67vh;
+ }
+
+ .khalnayak {
+     background-image: url(megun.gif);
+     width: 110px;
+     height: 110px;
+     background-size: cover;
+     position: absolute;
+     right: 0;
+     top: 71vh;
+
+ }
+
+ .cloud1 {
+     background-image: url(cloud.png);
+     width: 220px;
+     height: 140px;
+     background-size: cover;
+     position: absolute;
+     left: 110vw;
+
+ }
+
+ .cloud2 {
+     background-image: url(cloud.png);
+     width: 220px;
+     height: 140px;
+     background-size: cover;
+     position: absolute;
+     left: 110vw;
+
+ }
+
+ .cloud3 {
+     background-image: url(cloud.png);
+     width: 220px;
+     height: 140px;
+     background-size: cover;
+     position: absolute;
+     left: 110vw;
+     top: 30vh;
+
+ }
+
+ .animatecloud1 {
+     animation: cloudani1 8s linear 2s infinite;
+ }
+
+ .animatecloud2 {
+     animation: cloudani1 8s linear 7s infinite;
+ }
+
+ .animatecloud3 {
+     animation: cloudani1 8s linear 4s infinite;
+ }
+
+ @keyframes cloudani1 {
+     0% {
+         left: 110vw;
+     }
+
+     100% {
+         left: -10vw;
+     }
+
+ }
+
+ @keyframes cloudani2 {
+     0% {
+         left: 110vw;
+     }
+
+     100% {
+         left: -10vw;
+     }
+
+ }
+
+ @keyframes cloudani3 {
+     0% {
+         left: 110vw;
+     }
+
+     100% {
+         left: -10vw;
+     }
+
+ }
+
+ .sun {
+     background-image: url(sun.png);
+     width: 135px;
+     height: 140px;
+     background-size: cover;
+     margin-left: 10vw;
+
+ }
+
+ .animatesun {
+     animation: sunani 3s linear infinite alternate-reverse;
+ }
+
+ @keyframes sunani {
+     0% {
+         margin-top: 0;
+
+     }
+
+     100% {
+         margin-top: 5vh;
+     }
+
+ }
+
+ .fire {
+     background-image: url(fire.png);
+     width: 105px;
+     height: 75px;
+     background-size: cover;
+     position: absolute;
+     right: 0;
+     top: 75vh;
+     visibility: hidden;
+ }
+
+ .animatefire {
+     animation: fireani 8s linear 8s infinite;
+ }
+
+ @keyframes fireani {
+     0% {
+         right: 0;
+
+     }
+
+     100% {
+         right: 150vw;
+     }
+
+ }
+
+ .pan {
+     background-image: url(pan.png);
+     width: 75px;
+     height: 70px;
+     background-size: cover;
+     position: absolute;
+     right: 23vw;
+     top: 75vh;
+     visibility: hidden;
+ }
+
+ .animatepan {
+     animation: pan 10s linear 3s infinite,
+         panrotation 1s linear 3s infinite;
+
+ }
+
+ @keyframes pan {
+     0% {
+         right: 23vw;
+
+     }
+
+     100% {
+         right: 210vw;
+
+     }
+
+ }
+
+ @keyframes panrotation {
+     100% {
+         transform: rotate(-360deg);
+     }
+
+ }
+
+ /* .stone1 {
+    background-image: url(stone.png);
+    width: 165px;
+    height: 145px;
+    background-size: cover;
+    position: absolute;
+    right: 10vw;
+    top: 70vh;
+}
+
+.stone2 {
+    background-image: url(stone.png);
+    width: 165px;
+    height: 145px;
+    background-size: cover;
+    position: absolute;
+    left: 40vw;
+    top: 70vh;
+} */
+
+ .happycat {
+     background-image: url(happycat.gif);
+     width: 120px;
+     height: 150px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: absolute;
+     top: 33vh;
+     left: 25vw;
+     visibility: hidden;
+ }
+
+ .animatehappy {
+     animation: happyani 0.3s linear;
+ }
+
+ @keyframes happyani {
+
+     0% {
+         left: -10vw;
+     }
+
+     100% {
+         left: 25vw;
+     }
+
+ }
+
+
+ .mydance {
+     background-image: url(my.gif);
+     width: 99px;
+     height: 117px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: absolute;
+     top: 41vh;
+     right: 8vw;
+     visibility: hidden;
+ }
+
+ .animatemy {
+     animation: myani .3s linear;
+ }
+
+ @keyframes myani {
+
+     0% {
+         right: -10vw;
+
+     }
+
+     100% {
+         right: 8vw;
+     }
+
+ }
+
+ .sahilcry {
+     background-image: url(cry.gif);
+     width: 135px;
+     height: 130px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: absolute;
+     top: 54vh;
+     left: 50vw;
+     visibility: hidden;
+
+ }
+
+ .animatesahil {
+     animation: sahilani 2s linear;
+ }
+
+ @keyframes sahilani {
+
+     0% {
+         top: -10vh;
+     }
+
+     100% {
+         top: 54vh;
+     }
+ }
