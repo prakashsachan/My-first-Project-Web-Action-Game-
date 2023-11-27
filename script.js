@@ -8,9 +8,9 @@ audioGo = new Audio("gameover.mp3");
 audioF = new Audio("fire.mp3");
 audioL = new Audio("laugh.mp3");
 
-setTimeout(() => {
+window.addEventListener('load', function(){
     audioG.play();
-}, 2000)
+})
 
 setInterval(() => {
     audioF.play();
